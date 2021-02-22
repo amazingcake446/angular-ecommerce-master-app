@@ -1,0 +1,42 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <mat-list role="list" class="list">
+      <mat-list-item role="listitem">
+        <a 
+        href="#"
+        routerLink="/about"
+        routerLinkActive="active"
+        class="nav-links"
+        >About</a></mat-list-item>
+
+      <mat-list-item role="listitem">
+        <a 
+        href="#"
+        routerLink="/account"
+        routerLinkActive="active"
+        class="nav-links"
+        >Account</a></mat-list-item>
+
+      <mat-list-item role="listitem">
+        <a 
+        href="#"
+        routerLink="/likes"
+        routerLinkActive="active"
+        class="nav-links"
+        ><i class="material-icons pt-2">
+          favorite_border
+        </i></a></mat-list-item>
+
+      <mat-list-item role="listitem">
+        <a 
+        href="#"
+        routerLink="/cart"
+        routerLinkActive="active"
+        class="nav-links"
+        >Cart</a></mat-list-item>
+    </mat-list>
+  </mat-toolbar>

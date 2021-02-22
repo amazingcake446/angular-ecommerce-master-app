@@ -1,0 +1,33 @@
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">New Items</h1>
+        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator,
+          etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+        <button class="mr-3" mat-raised-button [matMenuTriggerFor]="sort">Sort</button>
+        <mat-menu #sort="matMenu">
+          <button mat-menu-item>Price to high to low</button>
+          <button mat-menu-item>Price to low to high</button>
+        </mat-menu>
+        <button mat-raised-button [matMenuTriggerFor]="size">Size</button>
+        <mat-menu #size="matMenu">
+          <button mat-menu-item>Price to high to low</button>
+  
+        </mat-menu>
+        <!--   <a href="#" class="btn btn-primary my-2">Main call to action</a>
+            <a href="#" class="btn btn-secondary my-2">Secondary action</a> -->
+      </div>
+    </div>
+  </section>
+  
+  <div class="container">
+    <div class="content">
+      <div class="d-flex justify-content-center" fxLayout="row wrap" fxLayoutGap="25px grid">
+        <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let product of [1,2,3,4]">
+          <app-product-list></app-product-list>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
