@@ -13,6 +13,14 @@ import { ProductListComponent } from './components/shopping-cart/product-list/pr
 import { CartComponent } from './components/shopping-cart/cart/cart.component';
 import { CartItemComponent } from './components/shopping-cart/cart/cart-item/cart-item.component';
 import { ProductItemComponent } from './components/shopping-cart/product-list/product-item/product-item.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 
@@ -27,6 +35,8 @@ import { ProductItemComponent } from './components/shopping-cart/product-list/pr
     CartComponent,
     CartItemComponent,
     ProductItemComponent,
+    HomeComponent,
+    AboutComponent,
 
 
   ],
@@ -34,7 +44,13 @@ import { ProductItemComponent } from './components/shopping-cart/product-list/pr
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
 
   ],
   providers: [],

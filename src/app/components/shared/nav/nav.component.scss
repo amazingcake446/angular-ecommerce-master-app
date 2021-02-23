@@ -1,6 +1,64 @@
-.example-spacer {
-    flex: 1 1 auto;
-  }
- .list {
-     display: flex; 
- }
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 300px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.spacer {
+  flex: 1 1 auto; 
+}
+.menu-btn {
+  font-family: 'Abel', sans-serif;
+  font-size: 1rem; 
+}
+.title {
+  text-decoration: none;
+  color: black; 
+  font-family: 'Abel', sans-serif;
+}
+.nav-links {
+  display: inline-block; 
+  margin: 0 10px; 
+  color: black; 
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: 'Abel', sans-serif;
+
+}
+.mat-18 {
+  cursor: pointer;
+  margin-bottom: 3rem; 
+  padding-left: .8rem; 
+  padding-top: 1rem; 
+}
+.bar{
+  justify-content: space-between;
+}
+.list {
+  display: flex; 
+}
+
+.left {
+  flex: 1; 
+}
+.center {
+  flex: 2; 
+  text-align: center;
+}
+.right {
+  flex: 1; 
+}

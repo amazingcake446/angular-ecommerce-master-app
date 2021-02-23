@@ -1,42 +1,87 @@
-<mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>My App</span>
-    <span class="example-spacer"></span>
-    <mat-list role="list" class="list">
-      <mat-list-item role="listitem">
-        <a 
-        href="#"
-        routerLink="/about"
-        routerLinkActive="active"
-        class="nav-links"
-        >About</a></mat-list-item>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" 
+  fixedInViewport 
+  [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'over'" 
+    [opened]="(isHandset$ | async) === true">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#" routerLink="/newitems">New Items</a>
+      <a mat-list-item href="#">Link 2</a>
+      <a mat-list-item href="#">Link 3</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div class="left">
+        <button 
+        mat-button 
+        (click)="drawer.toggle()"
+        class="menu-btn"
+        >
+          Menu
+       </button>
+      </div>
+      <div class="center">
+        <span><a 
+          href="#"
+          routerLink="/home"
+          routerLinkActive="active"
+          class="mat-display-1 title"
+          >Company Name</a></span>
+      </div>
+      <!-- <span class="spacer"></span>
+      
+      <span class="spacer"></span> -->
+        <div class="right">
+          <mat-list role="list" class="list">
+            <mat-list-item role="listitem">
+              <a 
+              href="#"
+              routerLink="/about"
+              routerLinkActive="active"
+              class="nav-links"
+              >About</a></mat-list-item>
 
-      <mat-list-item role="listitem">
-        <a 
-        href="#"
-        routerLink="/account"
-        routerLinkActive="active"
-        class="nav-links"
-        >Account</a></mat-list-item>
+            <mat-list-item role="listitem">
+              <a 
+              href="#"
+              routerLink="/account"
+              routerLinkActive="active"
+              class="nav-links"
+              >Account</a></mat-list-item>
 
-      <mat-list-item role="listitem">
-        <a 
-        href="#"
-        routerLink="/likes"
-        routerLinkActive="active"
-        class="nav-links"
-        ><i class="material-icons pt-2">
-          favorite_border
-        </i></a></mat-list-item>
+            <mat-list-item role="listitem">
+              <a 
+              href="#"
+              routerLink="/likes"
+              routerLinkActive="active"
+              class="nav-links"
+              ><i class="material-icons pt-2">
+                favorite_border
+              </i></a></mat-list-item>
 
-      <mat-list-item role="listitem">
-        <a 
-        href="#"
-        routerLink="/cart"
-        routerLinkActive="active"
-        class="nav-links"
-        >Cart</a></mat-list-item>
-    </mat-list>
-  </mat-toolbar>
+            <mat-list-item role="listitem">
+              <a 
+              href="#"
+              routerLink="/cart"
+              routerLinkActive="active"
+              class="nav-links"
+              >Cart</a></mat-list-item>
+          </mat-list>
+        </div>
+      
+   
+    </mat-toolbar>
+    <ng-content></ng-content>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
