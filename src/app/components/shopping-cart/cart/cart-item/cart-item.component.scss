@@ -1,3 +1,9 @@
 .cart-item {
     font-size: small; 
+    display: flex; 
+    align-items: center; 
+}
+.cart-image {
+    width: 80px; 
+    margin-right: 1rem; 
 }

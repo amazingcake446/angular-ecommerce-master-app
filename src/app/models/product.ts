@@ -5,7 +5,7 @@ export class Product {
     price: number; 
     imageUrl: string; 
 
-    constructor(id: number, title: string, description = '', price = 0, imageUrl='/src/assets/images/item2.webp') {
+    constructor(id, title, description = '', price = 0, imageUrl='../../../../../assets/images/item1.webp') {
         this.id = id
         this.title = title
         this.description = description

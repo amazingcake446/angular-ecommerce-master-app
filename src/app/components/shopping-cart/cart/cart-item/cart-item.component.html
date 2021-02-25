@@ -1,3 +1,21 @@
-<div class="cart-item">
-    <span>{{cartItem.productName}}</span> x <span>{{cartItem.qty}}</span>: <strong>{{(cartItem.qty * cartItem.price) | currency}}</strong>
+<div class="cart-item justify-content-between">
+  <div>
+    <img src="{{cartItem.imageUrl}}" class="cart-image" alt="">
+    <span class="mat-title">{{cartItem.productName}}</span> x <span class="mat-title">{{cartItem.qty}}</span>: <strong
+      class="mat-title">{{(cartItem.qty * cartItem.price) | currency}}</strong></div>
+
+      <span><button 
+        [disabled]='decreaseButtonDisabled' 
+        mat-button  
+        (click)="decreaseQty()">-</button></span>
+
+      <span><button 
+        [disabled]='increaseButtonDisabled' 
+        mat-button  
+        (click)="increaseQty()">+</button></span>
+
+      <span><button 
+        mat-button 
+        (click)="handleDeleteCartItem()">Delete Item</button></span>
+
 </div>

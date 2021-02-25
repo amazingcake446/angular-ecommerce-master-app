@@ -8,7 +8,10 @@
     </mat-card-content>
     <mat-card-actions class="d-flex align-items-center">
 
-      <button mat-button>Add to cart</button>
+      <button
+      mat-button
+      (click)="handleAddToCart()"
+      >Add to cart</button>
       <button mat-button>View details</button>
      
     </mat-card-actions>

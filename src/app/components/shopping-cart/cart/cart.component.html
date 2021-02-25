@@ -1,12 +1,20 @@
 <div *ngIf="cartItems.length === 0" class="alert alert-info text-center">
     Your cart is empty
+  </div>
+
+<div class="container d-flex justify-content-center align-items-center flex-column">
+  <h1 class="mat-display-2">You Cart</h1>
+  <div class="cart-container">
+   
+
+    <ul *ngIf="cartItems.length > 0" class="list-group">
+      <li class="list-group-item" *ngFor="let item of cartItems">
+        <app-cart-item [cartItem]="item"></app-cart-item>
+      </li>
+      <li class="list-group-item active">
+        <strong>Total: {{cartTotal | currency}}</strong>
+      </li>
+    </ul>
+  </div>
 </div>
 
-<ul *ngIf="cartItems.length > 0" class="list-group">
-    <li class="list-group-item" *ngFor="let item of cartItems">
-        <app-cart-item [cartItem]="item"></app-cart-item>
-    </li>
-    <li class="list-group-item active">
-        <strong>Total: {{cartTotal | currency}}</strong>
-    </li>
-</ul>
