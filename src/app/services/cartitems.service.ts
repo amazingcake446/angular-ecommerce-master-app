@@ -11,9 +11,9 @@ export class CartitemsService {
 
   cartTotal = 0; 
   cartItems = [
+    /* {productId: 1, productName: 'Product 1', qty: 1, price: 100, imageUrl:'../../../../../assets/images/item1.webp'},
     {productId: 1, productName: 'Product 1', qty: 1, price: 100, imageUrl:'../../../../../assets/images/item1.webp'},
-    {productId: 1, productName: 'Product 1', qty: 1, price: 100, imageUrl:'../../../../../assets/images/item1.webp'},
-    {productId: 1, productName: 'Product 1', qty: 1, price: 100, imageUrl:'../../../../../assets/images/item1.webp'},
+    {productId: 1, productName: 'Product 1', qty: 1, price: 100, imageUrl:'../../../../../assets/images/item1.webp'}, */
   /*   {productId: 1, productName: 'Product 2', qty: 1, price: 100},
     {productId: 1, productName: 'Product 3', qty: 1, price: 100}, */
   ]; 

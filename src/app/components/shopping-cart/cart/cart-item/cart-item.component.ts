@@ -32,6 +32,7 @@ export class CartItemComponent implements OnInit {
     console.log('Increased qty');
     let cartItemIndex = this.CartService.cartItems.indexOf(this.cartItem);
     this.CartService.cartItems[cartItemIndex].qty++;
+    
   }
   decreaseQty() {
     console.log('decrease qty');

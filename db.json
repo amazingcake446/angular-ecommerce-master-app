@@ -1,0 +1,87 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Chunky Sweater",
+      "imageUrl": "./assets/images/item1.webp",
+      "description": "",
+      "price": 299
+    },
+    {
+      "id": 2,
+      "title": "lorem impusm",
+      "imageUrl": "./assets/images/item2.webp",
+      "description": "",
+      "price": 299
+    },
+    {
+      "id": 3,
+      "title": "lorem impusm",
+      "imageUrl": "./assets/images/item3.webp",
+      "description": "",
+      "price": 299
+    },
+    {
+      "id": 4,
+      "title": "Chunky Sweater",
+      "imageUrl": "./assets/images/item4.webp",
+      "description": "",
+      "price": 299
+    },
+    {
+      "id": 5,
+      "title": "Chunky Sweater",
+      "imageUrl": "./assets/images/item5.webp",
+      "description": "",
+      "price": 299
+    },
+    {
+      "id": 6,
+      "title": "lorem impusm",
+      "imageUrl": "./assets/images/item6.webp",
+      "description": "",
+      "price": 299
+    },
+    {
+      "id": 7,
+      "title": "Chunky Sweater",
+      "imageUrl": "./assets/images/item7.webp",
+      "description": "",
+      "price": 299
+    },
+    {
+      "id": 7,
+      "title": "Chunky Sweater",
+      "imageUrl": "./assets/images/item8.webp",
+      "description": "",
+      "price": 299
+    },
+    {
+      "id": 7,
+      "title": "Chunky Sweater",
+      "imageUrl": "./assets/images/item9.webp",
+      "description": "",
+      "price": 299
+    }
+
+  ], 
+  "cart": [],
+  
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

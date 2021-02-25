@@ -1,7 +1,19 @@
 .container {
     height: 80vh; 
     width: 100vw; 
+    font-family: 'Abel', sans-serif;
 }
 .cart-container {
     width: 80%; 
+}
+.cart-icon {
+    width: 80px; 
+}
+.wrapper {
+    height: 10rem; 
+    width: 30rem; 
+    display: flex; 
+   
+    align-items: center; 
+    justify-content: space-around;
 }
