@@ -14,10 +14,7 @@ export class ShoppingCartComponent implements OnInit {
   constructor(private msg: MessengerService, private cartList: CartitemsService) { }
 
   ngOnInit(): void {
-    /* this.msg.getMsg().subscribe((product: Product) => {
-      this.addProductToCart(product);
-      console.log(product)
-    }) */
+  
   }
 
   /* addProductToCart(product: Product){

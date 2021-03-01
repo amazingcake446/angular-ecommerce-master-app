@@ -63,10 +63,39 @@
       "description": "",
       "price": 299
     }
-
-  ], 
-  "cart": [],
-  
+  ],
+  "cart": [
+    {
+      "product": {
+        "id": 1,
+        "title": "Chunky Sweater",
+        "imageUrl": "./assets/images/item1.webp",
+        "description": "",
+        "price": 299
+      },
+      "id": 1
+    },
+    {
+      "product": {
+        "id": 2,
+        "title": "lorem impusm",
+        "imageUrl": "./assets/images/item2.webp",
+        "description": "",
+        "price": 299
+      },
+      "id": 2
+    },
+    {
+      "product": {
+        "id": 1,
+        "title": "Chunky Sweater",
+        "imageUrl": "./assets/images/item1.webp",
+        "description": "",
+        "price": 299
+      },
+      "id": 3
+    }
+  ],
   "posts": [
     {
       "id": 1,

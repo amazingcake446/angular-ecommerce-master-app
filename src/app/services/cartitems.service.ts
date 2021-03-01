@@ -1,7 +1,11 @@
 import { Injectable, Output } from '@angular/core';
-import * as EventEmitter from 'events';
-import { Product } from '../models/product';
 
+import { Product } from '../models/product';
+import { Observable } from 'rxjs'
+import { HttpClient } from '@angular/common/http'; 
+import { cartUrl } from '../config/api';
+import { CartItem } from '../models/cart-item';
+import {map} from 'rxjs/operators'
 @Injectable({
   providedIn: 'root'
 })
@@ -11,27 +15,58 @@ export class CartitemsService {
 
   cartTotal = 0; 
   cartItems = [
-    /* {productId: 1, productName: 'Product 1', qty: 1, price: 100, imageUrl:'../../../../../assets/images/item1.webp'},
-    {productId: 1, productName: 'Product 1', qty: 1, price: 100, imageUrl:'../../../../../assets/images/item1.webp'},
-    {productId: 1, productName: 'Product 1', qty: 1, price: 100, imageUrl:'../../../../../assets/images/item1.webp'}, */
-  /*   {productId: 1, productName: 'Product 2', qty: 1, price: 100},
-    {productId: 1, productName: 'Product 3', qty: 1, price: 100}, */
+   
   ]; 
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
+  getItems(){
+    return this.cartItems
 
- 
-
-  getItems() {
-    return this.cartItems; 
   }
-  //delete method
 
-/*   deleteCartItem(product: Product) {
+  deleteCartItem(product: Product){
+    console.log('delete item')
     let cartItemIndex = this.cartItems.indexOf(product);
+    this.cartItems.splice(cartItemIndex, 1);
   }
- */
+
+  increaseQty(product: Product){
+    console.log('Increased qty');
+    let cartItemIndex = this.cartItems.indexOf(product);
+    this.cartItems[cartItemIndex].qty++;
+  }
+  
+  decreaseQty(product: Product){
+    console.log('decrease qty');
+    let cartItemIndex = this.cartItems.indexOf(product);
+      this.cartItems[cartItemIndex].qty--;
+  }
+
+  calcTotal() {
+    this.cartTotal = 0;
+    this.cartItems.forEach(item => {
+      this.cartTotal += (item.qty * item.price)
+    })
+  }
+
+
+
+  // get cart items with get method 
+getCartItems(): Observable<CartItem[]>{
+    return this.http.get<CartItem[]>(cartUrl)
+}
+
+// add products 
+addProductToCart(product: Product): Observable<any>  {
+  return this.http.post(cartUrl, {product})
+}
+
+// delete a product from cart 
+/* deleteProductFromCart(product: Product): Observable<any> {
+  return this.http.delete(cartUrl, {product})
+} */
+
   // added method
   addToCart(product: Product) {
     console.log(product);
