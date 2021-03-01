@@ -20,9 +20,9 @@ export class ProductItemComponent implements OnInit {
 
   // add to cart event will fire the addToCart in CartService 
   handleAddToCart() {
-    this.cartService.addProductToCart(this.productItem).subscribe(() => {
-    this.cartService.addToCart(this.productItem);
+    this.cartService.addServiceApiCall(this.productItem).subscribe(() => {
+      this.cartService.addToCart(this.productItem);
     })
-   }
+  }
   
 }

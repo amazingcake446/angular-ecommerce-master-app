@@ -22,8 +22,8 @@ import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { HttpClientModule } from '@angular/common/http';
-
-
+import { AccountComponent } from './components/account/account.component';
+import {FormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -38,6 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
     ProductItemComponent,
     HomeComponent,
     AboutComponent,
+    AccountComponent,
 
 
   ],
@@ -52,7 +53,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
 
   ],
   providers: [],
