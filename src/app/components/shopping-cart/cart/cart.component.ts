@@ -3,6 +3,7 @@ import { CartItem } from 'src/app/models/cart-item';
 
 import { Product } from 'src/app/models/product';
 import { CartitemsService } from 'src/app/services/cartitems.service';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 import { MessengerService } from 'src/app/services/messenger.service'
 
 @Component({
@@ -13,23 +14,21 @@ import { MessengerService } from 'src/app/services/messenger.service'
 export class CartComponent implements OnInit {
 
   cartTotal = 0;
-
+  
   cartItems = this.cartService.getItems(); 
- /* cartItems: CartItem[] = [];  */
 
-  constructor(private cartService: CartitemsService) { }
+ /*  retrievedData = this.localStorage.getItem('cart'); 
+  cartItemTest = JSON.parse(this.retrievedData);  */
+  /* cartItems = this.localStorage.carts;   */
+/*   JSON.parse(localStorage.getItem("names")); */
+/*  cartItems: CartItem[] =  this.localStorage.getItem('cart'); */
+
+  constructor(private cartService: CartitemsService, private localStorage: LocalStorageService) { }
 
   ngOnInit(): void {
-    this.calcTotal();
-    /* this.loadCartItems();  */
+  this.calcTotal(); 
+    
   }
-
- /*  loadCartItems() {
-    this.cartService.getCartItems().subscribe((items: CartItem[]) => {
-      console.log(items); 
-     this.cartItems = items; 
-    })
-  } */
 
   calcTotal() {
     this.cartTotal = 0;
