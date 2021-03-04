@@ -5,7 +5,7 @@
 <div class="container d-flex justify-content-center align-items-center flex-column">
   <div class="wrapper " *ngIf="cartItems.length > 0">
     <h1 class="mat-display-1">Your Cart</h1>
-    <img src="../../../../assets/images/cart-5s-200px.svg" class="cart-icon mat-display-1" alt="">
+    
   </div>
   
   <div class="cart-container">
@@ -19,6 +19,12 @@
         <strong>Total: {{cartTotal | currency}}</strong>
       </li>
     </ul>
+    <div class="text-center mt-4">
+      <button 
+      routerLink="/checkout"
+      mat-raised-button>checkout</button>
+    </div>
+   
   </div>
 </div>
 

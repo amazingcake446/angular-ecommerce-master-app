@@ -9,14 +9,14 @@
     },
     {
       "id": 2,
-      "title": "lorem impusm",
+      "title": "Shirt",
       "imageUrl": "./assets/images/item2.webp",
       "description": "",
       "price": 200
     },
     {
       "id": 3,
-      "title": "lorem impusm",
+      "title": "Black-Tshirt",
       "imageUrl": "./assets/images/item3.webp",
       "description": "",
       "price": 222
@@ -30,43 +30,46 @@
     },
     {
       "id": 5,
-      "title": "Chunky Sweater",
+      "title": "Hoodie",
       "imageUrl": "./assets/images/item5.webp",
       "description": "",
       "price": 111
     },
     {
       "id": 6,
-      "title": "lorem impusm",
+      "title": "Skinny Pants",
       "imageUrl": "./assets/images/item6.webp",
       "description": "",
       "price": 233
     },
     {
       "id": 7,
-      "title": "Chunky Sweater",
+      "title": "Skinny Jeans",
       "imageUrl": "./assets/images/item7.webp",
       "description": "",
       "price": 555
     },
     {
       "id": 8,
-      "title": "Chunky Sweater",
+      "title": "Soft Pants",
       "imageUrl": "./assets/images/item8.webp",
       "description": "",
       "price": 123
     },
     {
       "id": 9,
-      "title": "Chunky Sweater",
+      "title": "Sweatshirt",
       "imageUrl": "./assets/images/item9.webp",
       "description": "",
       "price": 299
     }
   ],
-  "cart": [
-  
+  "wishlist": [
+    {
+      "id": 3
+    }
   ],
+  "cart": [],
   "posts": [
     {
       "id": 1,

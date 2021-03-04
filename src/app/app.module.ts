@@ -23,7 +23,10 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AccountComponent } from './components/account/account.component';
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { OrderplacedComponent } from './components/orderplaced/orderplaced.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component'
 
 @NgModule({
   declarations: [
@@ -39,6 +42,9 @@ import {FormsModule} from '@angular/forms'
     HomeComponent,
     AboutComponent,
     AccountComponent,
+    CheckoutComponent,
+    OrderplacedComponent,
+    WishlistComponent,
 
 
   ],

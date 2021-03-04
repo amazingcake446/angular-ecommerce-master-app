@@ -5,6 +5,10 @@ import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import {AccountComponent} from 'src/app/components/account/account.component'; 
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { OrderplacedComponent } from './components/orderplaced/orderplaced.component';
+import { WishlistService } from './services/wishlist.service';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
 
 const routes: Routes = [
 
@@ -13,6 +17,9 @@ const routes: Routes = [
   {path: 'newitems', component: ShoppingCartComponent},
   {path: 'cart', component: CartComponent},
   {path: 'account', component: AccountComponent},
+  {path: 'checkout', component: CheckoutComponent},
+  {path: 'orderplaced', component: OrderplacedComponent},
+  {path: 'likes', component: WishlistComponent},
   
 ];
 

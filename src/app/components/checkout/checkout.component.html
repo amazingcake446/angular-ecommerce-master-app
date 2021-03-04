@@ -1,0 +1,84 @@
+<!-- <div class="row">
+    <div class="container bg-primary d-flex">
+        <div class="col-sm-7 d-flex flex-column justify-content-start align-items-center">
+            <h1 class="mt-4">Forms</h1>
+            
+                <form class="example-form d-flex flex-column">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Favorite food</mat-label>
+                        <input matInput placeholder="Ex. Pizza" value="Sushi">
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Leave a comment</mat-label>
+                        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+                    </mat-form-field>
+                </form>
+            
+        </div>
+
+        <div class="col-sm-4 d-flex justify-content-center">
+            <h1>CartItems</h1>
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <form #loginForm="ngForm" (ngSubmit)="login()" class="example-form mx-auto">
+                <mat-form-field class="example-full-width">
+                    <mat-label for="firstname">First name</mat-label>
+                    <input name="firstname" [ngClass]="{ 'is-invalid': firstname.touched && firstname.invalid }" #firstname="ngModel" [(ngModel)]="model.firstname" id="firstname" matInput placeholder="Ex. Amazingcake" required>
+                    <span class="invalid-feedback">Firstname can't be blank.</span>
+
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label for="lastname">Lastname</mat-label>
+                    <input name="lastname" [ngClass]="{ 'is-invalid': lastname.touched && lastname.invalid }" #lastname="ngModel" [(ngModel)]="model.lastname" id="lastname" matInput placeholder="Ex. Amazingcake" required>
+                    <span class="invalid-feedback">Lastname can't be blank.</span>
+
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                    <mat-label  for="email">Email</mat-label>
+                    <input name="email" [ngClass]="{ 'is-invalid': email.touched && email.invalid }" #email="ngModel" [(ngModel)]="model.email" id="email" matInput placeholder="Ex. amazthecake123" required>
+                    <span class="invalid-feedback">Email can't be blank.</span>
+                </mat-form-field>
+
+                <!-- <section class="example-section">
+                    <mat-checkbox name="remember" #remember="ngModel" [(ngModel)]="model.remember" id="remember" class="example-margin"></mat-checkbox>
+                    <mat-label for="remember">Remember Me</mat-label>
+                </section> -->
+
+                <button mat-raised-button 
+                routerLink="/orderplaced"
+                
+                [disabled]="loginForm.invalid">Purchase</button>
+            </form>
+        </div>
+
+        <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
+            <h1 class="mat-display-1">Your Cart</h1>
+            <mat-list class="w-100 mb-4">
+                <mat-card class="d-flex align-items-center justify-content-between " *ngFor="let items of itemsInCart">
+                    <div class="div">
+                        <img class="image-url mr-1" src="{{items.imageUrl}}" alt="">
+                        <span class="mr-2">{{items.productName}}</span>
+                        <span class="mr-2">Qty: {{items.qty}}</span>
+                        
+                    </div>
+                
+                    <div class="div mr-1">
+                        {{items.price | currency}}
+                    </div>
+                    
+                    <!-- <mat-divider></mat-divider> -->
+                </mat-card>
+
+            </mat-list>
+            
+        </div>
+
+    </div>
+</div>

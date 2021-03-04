@@ -1,7 +1,11 @@
-<div class="d-flex justify-content-center" fxLayout="row wrap" fxLayoutGap="25px grid">
-  <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let product of productList">
+<div class="container">
 
-    <app-product-item [productItem]="product"></app-product-item>
+  <div class="d-flex justify-content-center" fxLayout="row wrap" fxLayoutGap="25px grid">
+    <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let product of productList">
 
+      <app-product-item [productItem]="product" [addedToWishlist]="wishlist.indexOf(product.id) >= 0">
+      </app-product-item>
+
+    </div>
   </div>
 </div>
