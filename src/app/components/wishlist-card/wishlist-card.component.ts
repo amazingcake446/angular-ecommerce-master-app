@@ -1,17 +1,19 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Local } from 'protractor/built/driverProviders';
 import { Product } from 'src/app/models/product';
 import { CartitemsService } from 'src/app/services/cartitems.service';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
 import { WishlistService } from 'src/app/services/wishlist.service';
-
+import { WishlistComponent } from '../wishlist/wishlist.component';
 
 @Component({
-  selector: 'app-product-item',
-  templateUrl: './product-item.component.html',
-  styleUrls: ['./product-item.component.scss']
+  selector: 'app-wishlist-card',
+  templateUrl: './wishlist-card.component.html',
+  styleUrls: ['./wishlist-card.component.scss']
 })
-export class ProductItemComponent implements OnInit {
+export class WishlistCardComponent implements OnInit {
 
+  
   @Input() productItem!: Product 
 
   @Input() addedToWishlist: boolean; 
@@ -44,5 +46,4 @@ export class ProductItemComponent implements OnInit {
       this.addedToWishlist = false; 
     })
   }
-
 }

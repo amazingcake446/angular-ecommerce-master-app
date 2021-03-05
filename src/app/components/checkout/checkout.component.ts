@@ -11,17 +11,25 @@ export class CheckoutComponent implements OnInit {
  
   constructor(private cartService: CartitemsService, private localStorage: LocalStorageService) { }
   model: any = {}
+
   ngOnInit(): void {
-    
+    this.calcTotal(); 
   }
   
-  itemsInCart = this.cartService.cartItems
+  cartTotal = 0 
 
+  itemsInCart = this.cartService.cartItems
+  
   login(){
     console.log(this.model);
-    
+    localStorage.clear(); 
   }
-  
+  calcTotal() {
+    this.cartTotal = 0;
+    this.itemsInCart.forEach(item => {
+      this.cartTotal += (item.qty * item.price)
+    })
+  }
   emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email,

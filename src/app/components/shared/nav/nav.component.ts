@@ -18,13 +18,17 @@ export class NavComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver, private cartService: CartitemsService) {}
+  constructor(
+    private breakpointObserver: BreakpointObserver, 
+    private cartService: CartitemsService,
+    private localStorage: LocalStorageService
+    ) {}
 
   cartLength = this.cartService.cartItems.length
   
   ngOnInit(): void {
     
   }
-      
+   
 
 }

@@ -26,7 +26,7 @@
 <div class="container">
     <div class="row d-flex justify-content-center">
         <div class="col-md-6 d-flex justify-content-center align-items-center">
-            <form #loginForm="ngForm" (ngSubmit)="login()" class="example-form mx-auto">
+            <form #loginForm="ngForm"  class="example-form mx-auto">
                 <mat-form-field class="example-full-width">
                     <mat-label for="firstname">First name</mat-label>
                     <input name="firstname" [ngClass]="{ 'is-invalid': firstname.touched && firstname.invalid }" #firstname="ngModel" [(ngModel)]="model.firstname" id="firstname" matInput placeholder="Ex. Amazingcake" required>
@@ -53,7 +53,7 @@
 
                 <button mat-raised-button 
                 routerLink="/orderplaced"
-                
+                (click)="login()"
                 [disabled]="loginForm.invalid">Purchase</button>
             </form>
         </div>
@@ -77,7 +77,7 @@
                 </mat-card>
 
             </mat-list>
-            
+            <div>Your total: {{cartTotal | currency}}</div>
         </div>
 
     </div>

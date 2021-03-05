@@ -25,7 +25,6 @@ export class CartitemsService {
   getItems() {
     this.calcTotal(); 
     return this.cartItems
-    
   }
 
   // added method
@@ -50,6 +49,7 @@ export class CartitemsService {
         price: product.price,
         imageUrl: product.imageUrl
       });
+     
       this.localStorage.setItem('cartArray', JSON.stringify(this.cartItems))
     }
   }
@@ -71,7 +71,12 @@ export class CartitemsService {
   decreaseQty(product: Product) {
     console.log('decrease qty');
     let cartItemIndex = this.cartItems.indexOf(product);
-    this.cartItems[cartItemIndex].qty--;
+    if(this.cartItems[cartItemIndex].qty <= 1){
+      this.deleteCartItem(product); 
+    } else {
+      this.cartItems[cartItemIndex].qty--;
+    }
+    
     this.localStorage.setItem('cartArray', JSON.stringify(this.cartItems))
   }
 

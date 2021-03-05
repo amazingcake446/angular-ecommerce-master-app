@@ -26,7 +26,8 @@ import { AccountComponent } from './components/account/account.component';
 import {FormsModule} from '@angular/forms';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { OrderplacedComponent } from './components/orderplaced/orderplaced.component';
-import { WishlistComponent } from './components/wishlist/wishlist.component'
+import { WishlistComponent } from './components/wishlist/wishlist.component';
+import { WishlistCardComponent } from './components/wishlist-card/wishlist-card.component'
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { WishlistComponent } from './components/wishlist/wishlist.component'
     CheckoutComponent,
     OrderplacedComponent,
     WishlistComponent,
+    WishlistCardComponent,
 
 
   ],

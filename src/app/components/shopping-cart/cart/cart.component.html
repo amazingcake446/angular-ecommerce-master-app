@@ -22,6 +22,7 @@
     <div class="text-center mt-4">
       <button 
       routerLink="/checkout"
+      *ngIf="cartItems.length > 0"
       mat-raised-button>checkout</button>
     </div>
    

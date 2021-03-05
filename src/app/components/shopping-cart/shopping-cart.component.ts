@@ -3,6 +3,7 @@ import { MessengerService } from 'src/app/services/messenger.service';
 import {CartComponent} from 'src/app/components/shopping-cart/cart/cart.component'
 import { Product } from 'src/app/models/product';
 import { CartitemsService } from 'src/app/services/cartitems.service';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -11,10 +12,15 @@ import { CartitemsService } from 'src/app/services/cartitems.service';
 })
 export class ShoppingCartComponent implements OnInit {
 
-  constructor(private msg: MessengerService, private cartList: CartitemsService) { }
+  constructor(
+    private msg: MessengerService, 
+    private cartList: CartitemsService,
+    private localStorage: LocalStorageService
+    
+    ) { }
 
   ngOnInit(): void {
-  
+   
   }
 
   /* addProductToCart(product: Product){
