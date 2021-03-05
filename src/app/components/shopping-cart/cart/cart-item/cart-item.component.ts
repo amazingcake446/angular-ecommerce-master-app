@@ -19,11 +19,11 @@ export class CartItemComponent implements OnInit {
   constructor(private CartService: CartitemsService, private localStorage: LocalStorageService) { }
 
   ngOnInit(): void {
+   
   }
   
   handleDeleteCartItem() {
     this.CartService.deleteCartItem(this.cartItem) 
-   
   } 
 
   handleIncreaseQty() {

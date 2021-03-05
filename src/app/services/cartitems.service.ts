@@ -26,7 +26,9 @@ export class CartitemsService {
     this.calcTotal(); 
     return this.cartItems
   }
-
+ /*  getCartItems(): Observable {
+    return JSON.parse(this.localStorage.getItem('cartArray')) || [];
+  } */
 
    /*  getCartItems(): Observable<CartItem[]> {
     return this.http.get<CartItem[]>(cartUrl)
