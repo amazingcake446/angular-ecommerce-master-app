@@ -27,6 +27,11 @@ export class CartitemsService {
     return this.cartItems
   }
 
+
+   /*  getCartItems(): Observable<CartItem[]> {
+    return this.http.get<CartItem[]>(cartUrl)
+  } */
+
   // added method
   addToCart(product: Product) {
     console.log(product);
@@ -90,9 +95,7 @@ export class CartitemsService {
 
 
   // get cart items with get method 
- /*  getCartItems(): Observable<CartItem[]> {
-    return this.http.get<CartItem[]>(cartUrl)
-  } */
+
 
   // add items with post to cart
   /* addServiceApiCall(product: Product): Observable<any> {

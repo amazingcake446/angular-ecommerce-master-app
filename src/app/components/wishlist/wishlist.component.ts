@@ -10,6 +10,7 @@ import { WishlistService } from 'src/app/services/wishlist.service';
   styleUrls: ['./wishlist.component.scss']
 })
 export class WishlistComponent implements OnInit {
+  
   productList: Product[] = []; 
   wishlist: number[] = []
 

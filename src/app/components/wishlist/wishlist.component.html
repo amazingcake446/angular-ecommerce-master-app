@@ -1,5 +1,6 @@
 <div class="container mt-4">
-  <h1 class="mat-display-1 text-center">Your Likes</h1>
+  <h1 *ngIf="wishlist.length > 0" class="mat-display-1 text-center">Your Likes</h1>
+  <h1 *ngIf="wishlist.length === 0" class="mat-display-1 text-center">You have no likes</h1>
   <div class="d-flex justify-content-center" fxLayout="row wrap" fxLayoutGap="25px grid">
     <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let product of productList">
 

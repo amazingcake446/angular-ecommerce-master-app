@@ -64,7 +64,11 @@
       "price": 299
     }
   ],
-  "wishlist": [],
+  "wishlist": [
+    {
+      "id": 2
+    }
+  ],
   "cart": [],
   "posts": [
     {
